@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>for jabarr 💌</title>
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(120deg, #101010, #3b3b3b);
+        color: #fff;
+        font-family: "Poppins", sans-serif;
+        text-align: center;
+        overflow: hidden;
+        padding: 20px;
+      }
+      h1 {
+        font-size: 2em;
+        animation: fadeIn 2s ease forwards;
+        margin-bottom: 30px;
+      }
+      p {
+        font-size: 1.05em;
+        opacity: 0;
+        max-width: 600px;
+        line-height: 1.6;
+        animation: fadeIn 2s ease 1.5s forwards;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .hearts {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        z-index: -1;
+      }
+      .hearts span {
+        position: absolute;
+        display: block;
+        width: 15px;
+        height: 15px;
+        background: pink;
+        animation: float 10s linear infinite;
+        bottom: -150px;
+        opacity: 0.5;
+      }
+      @keyframes float {
+        0% {
+          transform: translateY(0) rotate(0deg);
+          opacity: 1;
+        }
+        100% {
+          transform: translateY(-1000px) rotate(720deg);
+          opacity: 0;
+        }
+      }
+      audio {
+        margin-top: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="hearts"></div>
+    <h1>halo jabarr,</h1>
+    <p>
+      nggak kerasa ya, udah kurang lebih dua tahun kaka kenal sama jabar yang
+      sekarang udah tumbuh sejauh ini. hahaha… waktu cepat banget berlalu. dulu
+      mungkin ada hal yang seharusnya kaka ungkapin, tapi yah… biarlah, yang
+      udah lewat biar jadi kenangan aja.<br /><br />
+
+      kaka cuma pengen bilang, kaka selalu doain jabar bahagia, apapun bentuknya.
+      semoga jabar selalu jadi diri sendiri, yang kuat, yang ceria, dan yang
+      tulus seperti biasanya. kadang kalau jabar cerita—apalagi pas jabar lagi
+      sedih—kaka tuh pengen banget bisa jadi pendengar terbaik buat kamu. jadi,
+      kalo ada apa-apa, jangan ragu cerita ya. kaka selalu siap dengerin,
+      kapanpun sempat 🫶<br /><br />
+
+      kaka juga paling seneng kalau denger kabar bahagia dari jabar, entah itu
+      pencapaian kecil, atau cuma sekadar, “aku senang banget hari ini
+      karena…”—itu aja udah cukup buat bikin hari kaka ikut cerah.<br /><br />
+
+      ada hal yang dari dulu pengen banget kaka lakuin, tapi nggak bisa… karena
+      dulu jabar udah punya seseorang. jadi ya, kaka cuma bisa mengagumi dari
+      jauh, diam-diam, tapi tulus.
+    </p>
+
+    <audio controls autoplay loop>
+      <source src="(https://files.catbox.moe/nkkilv.m4a)" type="audio/mpeg" />
+      browser kamu nggak support audio.
+    </audio>
+
+    <script>
+      const hearts = document.querySelector(".hearts");
+      for (let i = 0; i < 20; i++) {
+        const span = document.createElement("span");
+        span.style.left = Math.random() * window.innerWidth + "px";
+        span.style.animationDuration = 5 + Math.random() * 5 + "s";
+        span.style.width = span.style.height = 10 + Math.random() * 10 + "px";
+        hearts.appendChild(span);
+      }
+    </script>
+  </body>
+</html>
